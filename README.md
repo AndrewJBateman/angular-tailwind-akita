@@ -1,27 +1,90 @@
-# AngularTailwindAkita
+# :zap: Angular Tailwind Akita
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.0.
+* Angular app using [Akita State Management](https://datorama.github.io/akita/) & [Tailwindcss](https://developers.google.com/chart/) components to display API data
+* **Note:** to open web links in a new window use: _ctrl+click on link_
 
-## Development server
+![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/angular-tailwind-akita?style=plastic)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/AndrewJBateman/angular-tailwind-akita?style=plastic)
+![GitHub Repo stars](https://img.shields.io/github/stars/AndrewJBateman/angular-tailwind-akita?style=plastic)
+![GitHub last commit](https://img.shields.io/github/last-commit/AndrewJBateman/angular-tailwind-akita?style=plastic)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## :page_facing_up: Table of contents
 
-## Code scaffolding
+* [:zap: Angular Tailwind Unsplash](#zap-angular-tailwind-unsplash)
+  * [:page_facing_up: Table of contents](#page_facing_up-table-of-contents)
+  * [:books: General info](#books-general-info)
+  * [:camera: Screenshots](#camera-screenshots)
+  * [:signal_strength: Technologies](#signal_strength-technologies)
+  * [:floppy_disk: Setup](#floppy_disk-setup)
+  * [:wrench: Testing](#wrench-testing)
+  * [:computer: Code Examples](#computer-code-examples)
+  * [:cool: Features](#cool-features)
+  * [:clipboard: Status & To-Do List](#clipboard-status--to-do-list)
+  * [:clap: Inspiration](#clap-inspiration)
+  * [:file_folder: License](#file_folder-license)
+  * [:envelope: Contact](#envelope-contact)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## :books: General info
 
-## Build
+* TBA: About and Contact pages give more information on app using Tailwind CSS cards
+* Angular 12 has built-in Tailwind support
+* To build for production Tailwind’s purge option is used to tree-shake unused styles and optimize final build size.
+* [Free svg site](https://freesvg.org/) for svgs
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## :camera: Screenshots
 
-## Running unit tests
+![Angular page](./img/home.jpg)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## :signal_strength: Technologies
 
-## Running end-to-end tests
+* [Angular framework v12](https://angular.io/)
+* [@ngneat operator until-destroy v8](https://github.com/ngneat/until-destroy/#use-with-ivy) to unsubscribe from observables when component destroyed, instead of using Angular ngDestroy lifecycle
+* [Akita State Management for JS v6](https://datorama.github.io/akita/)
+* [Akita Ng Entity Service v6](https://datorama.github.io/akita/docs/angular/entity-service/)
+* [Reactive Extensions Library for Javascript rxjs v6](https://rxjs.dev/)
+* [@ngneat/tailwind v7](https://www.npmjs.com/package/@ngneat/tailwind) Angular Tailwind CSS Schematics
+* [Tailwindcss v2](https://tailwindcss.com/) CSS framework
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## :floppy_disk: Setup
 
-## Further help
+* Run `npm i` to install dependencies.
+* Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* Run `npm run build` for a production build with css purging.
+* The build artifacts will be stored in the `dist/angular-tailwind-akita` directory.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## :wrench: Testing
+
+* Run `ng lint` to lint all files using tslint
+* Run `ng test` to run Jasmine unit tests via [Karma](https://karma-runner.github.io). Currrently 9/9 tests pass
+* Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/). Currently 0 tests so all pass
+
+## :computer: Code Examples
+
+* t
+
+```typescript
+t
+```
+
+## :cool: Features
+
+* Lazy-loading of About and Contact pages
+* All 3 pages have >90% Lighthouse test scores
+* Tailwind build for production css purge results in a very small styles bundle (about xkB)
+
+## :clipboard: Status & To-Do List
+
+* Status: In work
+* To-Do: add akita
+
+## :clap: Inspiration
+
+* tba
+
+## :file_folder: License
+
+* This project is licensed under the terms of the MIT license.
+
+## :envelope: Contact
+
+* Repo created by [ABateman](https://github.com/AndrewJBateman), email: gomezbateman@yahoo.com
