@@ -26,6 +26,7 @@
 
 ## :books: General info
 
+* API data displayed in a responsive grid of cards styled with Tailwind. Clicking on a card toggles a modal to open/close with the full API post data
 * TBA: About and Contact pages give more information on app using Tailwind CSS cards
 * Angular 12 has built-in Tailwind support
 * To build for production Tailwind’s purge option is used to tree-shake unused styles and optimize final build size.
@@ -54,7 +55,7 @@
 
 ## :wrench: Testing
 
-* Run `ng lint` to lint all files using tslint
+* TBD Run `ng lint` to lint all files using tslint
 * Run `ng test` to run Jasmine unit tests via [Karma](https://karma-runner.github.io). Currrently 9/9 tests pass
 * Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/). Currently 0 tests so all pass
 
@@ -68,14 +69,14 @@ t
 
 ## :cool: Features
 
-* Lazy-loading of About and Contact pages
-* All 3 pages have >90% Lighthouse test scores
+* TBD Lazy-loading of About and Contact pages
+* TBD All 3 pages have >90% Lighthouse test scores
 * Tailwind build for production css purge results in a very small styles bundle (about xkB)
 
 ## :clipboard: Status & To-Do List
 
-* Status: In work
-* To-Do: add akita
+* Status: In work. Grid of post cards displayed.
+* To-Do: add linting, 404 page, detail card modal, Akita. Add checking. Add favourite store, Connect backend database or API?
 
 ## :clap: Inspiration
 
