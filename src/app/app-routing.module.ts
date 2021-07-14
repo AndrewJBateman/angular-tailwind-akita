@@ -7,6 +7,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./cards/cards.module').then((mod) => mod.CardsModule),
   },
+  {
+    path: 'card-add',
+    loadChildren: () =>
+      import('./cards/card-add/card-add.module').then((mod) => mod.CardAddModule),
+  },
   // {
   //   path: "**",
   //   loadChildren: () =>
