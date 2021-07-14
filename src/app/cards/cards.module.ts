@@ -1,23 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CardItemComponent } from './card-item/card-item.component';
-import { CardGridComponent } from './card-grid/card-grid.component';
 import { RouterModule, Routes } from '@angular/router';
+
 
 const routes: Routes = [
   {
     path: '',
-    component: CardGridComponent,
-  },
-  {
-    path: 'detail',
-    component: CardItemComponent,
+    loadChildren: () =>
+      import('./card-grid/card-grid.module').then((mod) => mod.CardGridModule),
   },
 ];
 
 @NgModule({
-  declarations: [CardItemComponent, CardGridComponent],
+  declarations: [],
   imports: [CommonModule, RouterModule.forChild(routes)],
-  exports: [CardItemComponent],
+  exports: [],
 })
 export class CardsModule {}
