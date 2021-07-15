@@ -10,20 +10,32 @@ const routes: Routes = [
   {
     path: 'card-add',
     loadChildren: () =>
-      import('./cards/card-add/card-add.module').then((mod) => mod.CardAddModule),
+      import('./cards/card-add/card-add.module').then(
+        (mod) => mod.CardAddModule
+      ),
   },
   {
     path: 'card/:id',
     loadChildren: () =>
       import('./cards/card/card.module').then((mod) => mod.CardModule),
   },
-  // {
-  //   path: "**",
-  //   loadChildren: () =>
-  //     import("./modules/pagenotfound/pagenotfound.module").then(
-  //       (mod) => mod.PageNotFoundModule
-  //     ),
-  // },
+  {
+    path: 'about',
+    loadChildren: () =>
+      import('./core/about/about.module').then((mod) => mod.AboutModule),
+  },
+  {
+    path: 'contact',
+    loadChildren: () =>
+      import('./core/contact/contact.module').then((mod) => mod.ContactModule),
+  },
+  {
+    path: '**',
+    loadChildren: () =>
+      import('./core/not-found/not-found.module').then(
+        (mod) => mod.NotFoundModule
+      ),
+  },
 ];
 
 @NgModule({
