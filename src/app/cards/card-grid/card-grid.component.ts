@@ -1,21 +1,36 @@
 import { Component, OnInit } from '@angular/core';
+import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 
-import TestCards from '../../test-data';
-import { PostCard } from '../card.model';
+import { PostsQuery } from '../../state/posts.query';
+import { PostsService } from '../../state/posts.service';
+import { PostsStore } from '../../state/posts.store';
 
+// import TestCards from '../../test-data';
+// import { PostCard } from '../card.model';
+
+@UntilDestroy()
 @Component({
   selector: 'app-card-grid',
   templateUrl: './card-grid.component.html',
-  styleUrls: ['./card-grid.component.css'],
 })
 export class CardGridComponent implements OnInit {
-  testCards: PostCard[] = TestCards;
-  constructor() {}
+  // testCards: PostCard[] = TestCards;
+  constructor(
+    private postService: PostsService,
+    private postQuery: PostsQuery,
+    private postStore: PostsStore
+  ) {}
 
+  public posts$ = this.postQuery.selectAll();
+  public loading = this.postQuery.selectLoading();
   ngOnInit(): void {
+    this.postService
+      .connect()
+      .pipe(untilDestroyed(this))
+      .subscribe(() => {});
   }
 
   toggleModal() {
-    console.log('toggled')
+    console.log('toggled');
   }
 }
