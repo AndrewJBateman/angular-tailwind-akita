@@ -4,32 +4,39 @@
     content="Blog page uses Tailwind-styled cards to display posts that can be clicked on to show a more detailed page."
   />
 </head>
-<body class="min-h-screen min-w-screen">
-  <div
-  class="
-    grid
-    p-4
-    gap-4
-    sm:grid-cols-1
-    md:grid-cols-2
-    lg:grid-cols-3
-    xl:grid-cols-4
-  "
->
-  <app-card-item
-    class="
-      transition-transform
-      transform
-      hover:scale-105
-      cursor-pointer
-      duration-300
-      ease-in-out
-    "
-    *ngFor="let card of posts$ | async"
-    [data]="card"
-    (click)="toggleModal()"
-    [routerLink]="['/card', card._id]"
-  >
-  </app-card-item>
+
+<div *ngIf="loading$ | async; else cards">
+  <app-spinner></app-spinner>
 </div>
-</body>
+
+<ng-template #cards>
+  <body class="min-h-screen min-w-screen">
+    <div
+      class="
+        grid
+        p-4
+        gap-4
+        sm:grid-cols-1
+        md:grid-cols-2
+        lg:grid-cols-3
+        xl:grid-cols-4
+      "
+    >
+      <app-card-item
+        class="
+          transition-transform
+          transform
+          hover:scale-105
+          cursor-pointer
+          duration-300
+          ease-in-out
+        "
+        *ngFor="let card of posts$ | async"
+        [data]="card"
+        (click)="toggleModal()"
+        [routerLink]="['/card', card._id]"
+      >
+      </app-card-item>
+    </div>
+  </body>
+</ng-template>

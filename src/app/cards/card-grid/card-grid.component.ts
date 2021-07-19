@@ -5,16 +5,12 @@ import { PostsQuery } from '../../state/posts.query';
 import { PostsService } from '../../state/posts.service';
 import { PostsStore } from '../../state/posts.store';
 
-// import TestCards from '../../test-data';
-// import { PostCard } from '../card.model';
-
 @UntilDestroy()
 @Component({
   selector: 'app-card-grid',
   templateUrl: './card-grid.component.html',
 })
 export class CardGridComponent implements OnInit {
-  // testCards: PostCard[] = TestCards;
   constructor(
     private postService: PostsService,
     private postQuery: PostsQuery,
@@ -22,12 +18,14 @@ export class CardGridComponent implements OnInit {
   ) {}
 
   public posts$ = this.postQuery.selectAll();
-  public loading = this.postQuery.selectLoading();
+  public loading$ = this.postQuery.selectLoading();
   ngOnInit(): void {
     this.postService
       .connect()
       .pipe(untilDestroyed(this))
-      .subscribe(() => {});
+      .subscribe(() => {
+        console.log('this: ', this);
+      });
   }
 
   toggleModal() {
