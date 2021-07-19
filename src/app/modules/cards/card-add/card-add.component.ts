@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Post } from '../../state/post.model';
-import { PostsService } from '../../state/posts.service';
+import { Post } from '../../../state/post.model';
+import { PostsService } from '../../../state/posts.service';
 
 @Component({
   selector: 'app-card-add',

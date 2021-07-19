@@ -8,6 +8,10 @@ import { Post } from "../../../state/post.model";
 export class CardItemComponent implements OnInit {
   @Input()
   data!: Post;
+
+  @Input()
+  gridView: boolean = true;
+
   constructor() {}
 
   ngOnInit(): void {}
