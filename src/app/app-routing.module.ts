@@ -5,19 +5,19 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () =>
-      import('./cards/cards.module').then((mod) => mod.CardsModule),
+      import('./modules/cards/cards.module').then((mod) => mod.CardsModule),
   },
   {
     path: 'card-add',
     loadChildren: () =>
-      import('./cards/card-add/card-add.module').then(
+      import('./modules/cards/card-add/card-add.module').then(
         (mod) => mod.CardAddModule
       ),
   },
   {
-    path: 'card/:id',
+    path: 'card-detail',
     loadChildren: () =>
-      import('./cards/card/card.module').then((mod) => mod.CardModule),
+      import('./modules/cards/card/card.module').then((mod) => mod.CardModule),
   },
   {
     path: 'about',
