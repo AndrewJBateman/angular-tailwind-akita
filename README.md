@@ -10,7 +10,7 @@
 
 ## :page_facing_up: Table of contents
 
-* [:zap: Angular Tailwind Unsplash](#zap-angular-tailwind-unsplash)
+* [:zap: Angular Tailwind Akita](#zap-angular-tailwind-akita)
   * [:page_facing_up: Table of contents](#page_facing_up-table-of-contents)
   * [:books: General info](#books-general-info)
   * [:camera: Screenshots](#camera-screenshots)
@@ -55,7 +55,6 @@
 
 ## :wrench: Testing
 
-* TBD Run `ng lint` to lint all files using tslint
 * Run `ng test` to run Jasmine unit tests via [Karma](https://karma-runner.github.io). Currrently 9/9 tests pass
 * Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/). Currently 0 tests so all pass
 
@@ -70,17 +69,17 @@ t
 ## :cool: Features
 
 * TBD Lazy-loading of About and Contact pages
-* TBD All 3 pages have >90% Lighthouse test scores
-* Tailwind build for production css purge results in a very small styles bundle (about xkB)
+* Tailwind build for production css purge results in a very small styles bundle
 
 ## :clipboard: Status & To-Do List
 
-* Status: In work. Grid of post cards displayed.
-* To-Do: add linting, 404 page, detail card modal, Akita. Add checking. Add favourite store, Connect backend database or API?
+* Status: Part working. 
+* To-Do: Complete about and contact pages etc. Consider updating to Angular13, firebase9 etc. but will require adjustments to module imports etc.
 
 ## :clap: Inspiration
 
-* tba
+* [Akita docs](https://datorama.github.io/akita/docs/store)
+* [SyncCollection in Akita Collection Service too expensive?](http://5.9.10.113/59918174/synccollection-in-akita-collection-service-too-expensive)
 
 ## :file_folder: License
 
