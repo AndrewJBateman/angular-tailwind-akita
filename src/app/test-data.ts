@@ -1,4 +1,4 @@
-import { PostCard } from "./cards/card.model"
+import { PostCard } from "./modules/cards/card.model"
 
 const TestCards: PostCard[] = [
   {
