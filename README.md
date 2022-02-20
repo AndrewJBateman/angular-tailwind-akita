@@ -28,7 +28,7 @@
 
 * API data displayed in a responsive grid of cards styled with Tailwind. Clicking on a card toggles a modal to open/close with the full API post data
 * TBA: About and Contact pages give more information on app using Tailwind CSS cards
-* Angular 12 has built-in Tailwind support
+* Angular 12+ has built-in Tailwind support
 * To build for production Tailwind’s purge option is used to tree-shake unused styles and optimize final build size.
 * [Free svg site](https://freesvg.org/) for svgs
 
@@ -38,13 +38,13 @@
 
 ## :signal_strength: Technologies
 
-* [Angular framework v12](https://angular.io/)
-* [@ngneat operator until-destroy v8](https://github.com/ngneat/until-destroy/#use-with-ivy) to unsubscribe from observables when component destroyed, instead of using Angular ngDestroy lifecycle
-* [Akita State Management for JS v6](https://datorama.github.io/akita/)
-* [Akita Ng Entity Service v6](https://datorama.github.io/akita/docs/angular/entity-service/)
-* [Reactive Extensions Library for Javascript rxjs v6](https://rxjs.dev/)
+* [Angular framework v13](https://angular.io/)
+* [@ngneat operator until-destroy v9](https://github.com/ngneat/until-destroy/#use-with-ivy) to unsubscribe from observables when component destroyed, instead of using Angular ngDestroy lifecycle
+* [Akita State Management for JS v7](https://datorama.github.io/akita/)
+* [Akita Ng Entity Service v7](https://datorama.github.io/akita/docs/angular/entity-service/)
+* [Reactive Extensions Library for Javascript rxjs v7](https://rxjs.dev/)
 * [@ngneat/tailwind v7](https://www.npmjs.com/package/@ngneat/tailwind) Angular Tailwind CSS Schematics
-* [Tailwindcss v2](https://tailwindcss.com/) CSS framework
+* [Tailwindcss v3](https://tailwindcss.com/) CSS framework
 
 ## :floppy_disk: Setup
 
