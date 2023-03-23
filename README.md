@@ -1,6 +1,6 @@
 # :zap: Angular Tailwind Akita
 
-* Angular app using [Akita State Management](https://datorama.github.io/akita/) & [Tailwindcss](https://developers.google.com/chart/) components to display API data
+* Angular app using [Akita State Management](https://www.npmjs.com/package/@datorama/akita) & [Tailwindcss](https://developers.google.com/chart/) components to display API data
 * **Note:** to open web links in a new window use: _ctrl+click on link_
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/angular-tailwind-akita?style=plastic)
@@ -11,17 +11,17 @@
 ## :page_facing_up: Table of contents
 
 * [:zap: Angular Tailwind Akita](#zap-angular-tailwind-akita)
-  * [:page_facing_up: Table of contents](#page_facing_up-table-of-contents)
+  * [:page\_facing\_up: Table of contents](#page_facing_up-table-of-contents)
   * [:books: General info](#books-general-info)
   * [:camera: Screenshots](#camera-screenshots)
-  * [:signal_strength: Technologies](#signal_strength-technologies)
-  * [:floppy_disk: Setup](#floppy_disk-setup)
+  * [:signal\_strength: Technologies](#signal_strength-technologies)
+  * [:floppy\_disk: Setup](#floppy_disk-setup)
   * [:wrench: Testing](#wrench-testing)
   * [:computer: Code Examples](#computer-code-examples)
   * [:cool: Features](#cool-features)
-  * [:clipboard: Status & To-Do List](#clipboard-status--to-do-list)
+  * [:clipboard: Status \& To-Do List](#clipboard-status--to-do-list)
   * [:clap: Inspiration](#clap-inspiration)
-  * [:file_folder: License](#file_folder-license)
+  * [:file\_folder: License](#file_folder-license)
   * [:envelope: Contact](#envelope-contact)
 
 ## :books: General info
@@ -68,13 +68,12 @@ t
 
 ## :cool: Features
 
-* TBD Lazy-loading of About and Contact pages
-* Tailwind build for production css purge results in a very small styles bundle
+* tba
 
 ## :clipboard: Status & To-Do List
 
-* Status: Part working. 
-* To-Do: Complete about and contact pages etc. Consider updating to Angular13, firebase9 etc. but will require adjustments to module imports etc.
+* Status: Working.
+* To-Do: Re-add Tailwind
 
 ## :clap: Inspiration
 
