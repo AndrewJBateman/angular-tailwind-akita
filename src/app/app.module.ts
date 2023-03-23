@@ -1,46 +1,40 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NG_ENTITY_SERVICE_CONFIG } from '@datorama/akita-ng-entity-service';
-import { AkitaNgDevtools } from '@datorama/akita-ngdevtools';
-import { AkitaNgRouterStoreModule } from '@datorama/akita-ng-router-store';
-
-import { HttpClientModule } from "@angular/common/http";
-import { ReactiveFormsModule } from "@angular/forms";
-
-import { AngularFireModule } from '@angular/fire'; // AngularFire module
-import { AngularFirestoreModule } from '@angular/fire/firestore';// Firestore module
-import { AngularFireStorageModule, BUCKET } from '@angular/fire/storage';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
-import { CardsModule } from './modules/cards/cards.module';
-
-import { environment } from '../environments/environment';
-import { NavbarComponent } from './core/navbar/navbar.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTableModule } from '@angular/material/table';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
+import {
+  MAT_FORM_FIELD_DEFAULT_OPTIONS,
+  MatFormFieldModule,
+} from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { ReactiveFormsModule } from '@angular/forms';
+import { DataFormComponent } from './components/data-form/data-form.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent],
+  declarations: [AppComponent, DataFormComponent],
   imports: [
-    ReactiveFormsModule,
-    AngularFirestoreModule,
-    AngularFireStorageModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
-    CardsModule,
-    environment.production ? [] : AkitaNgDevtools.forRoot(),
-    AkitaNgRouterStoreModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    MatTableModule,
+    MatSlideToggleModule,
+    MatButtonModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
   providers: [
     {
-      provide: NG_ENTITY_SERVICE_CONFIG,
-      useValue: { baseUrl: 'https://jsonplaceholder.typicode.com' },
+      provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,
+      useValue: { appearance: 'outline' },
     },
-    {
-      provide: BUCKET, useValue: "gs://angular-akita-firebase.appspot.com"
-    }
   ],
   bootstrap: [AppComponent],
 })

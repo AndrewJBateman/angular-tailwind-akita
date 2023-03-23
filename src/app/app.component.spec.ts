@@ -23,13 +23,13 @@ describe('AppComponent', () => {
   it(`should have as title 'angular-tailwind-akita'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('angular-tailwind-akita');
+    expect(app.title).toEqual('v');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('angular-tailwind-akita app is running!');
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('.content span')?.textContent).toContain('angular-tailwind-akita app is running!');
   });
 });
