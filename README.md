@@ -38,12 +38,9 @@
 
 ## :signal_strength: Technologies
 
-* [Angular framework v13](https://angular.io/)
-* [@ngneat operator until-destroy v9](https://github.com/ngneat/until-destroy/#use-with-ivy) to unsubscribe from observables when component destroyed, instead of using Angular ngDestroy lifecycle
-* [Akita State Management for JS v7](https://datorama.github.io/akita/)
-* [Akita Ng Entity Service v7](https://datorama.github.io/akita/docs/angular/entity-service/)
+* [Angular framework v15](https://angular.io/)
+* [Akita State Management for JS v8](https://www.npmjs.com/package/@datorama/akita). Note, Akita recommend using a newer Reactive State Management solution called "Elf"
 * [Reactive Extensions Library for Javascript rxjs v7](https://rxjs.dev/)
-* [@ngneat/tailwind v7](https://www.npmjs.com/package/@ngneat/tailwind) Angular Tailwind CSS Schematics
 * [Tailwindcss v3](https://tailwindcss.com/) CSS framework
 
 ## :floppy_disk: Setup
@@ -55,15 +52,14 @@
 
 ## :wrench: Testing
 
-* Run `ng test` to run Jasmine unit tests via [Karma](https://karma-runner.github.io). Currrently 9/9 tests pass
-* Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/). Currently 0 tests so all pass
+* no testing set up
 
 ## :computer: Code Examples
 
-* t
+* tba
 
 ```typescript
-t
+tba
 ```
 
 ## :cool: Features
@@ -73,12 +69,11 @@ t
 ## :clipboard: Status & To-Do List
 
 * Status: Working.
-* To-Do: Re-add Tailwind
+* To-Do: Re-add Tailwind and styling
 
 ## :clap: Inspiration
 
-* [Akita docs](https://datorama.github.io/akita/docs/store)
-* [SyncCollection in Akita Collection Service too expensive?](http://5.9.10.113/59918174/synccollection-in-akita-collection-service-too-expensive)
+* [Akita docs](https://www.npmjs.com/package/@datorama/akita)
 
 ## :file_folder: License
 
