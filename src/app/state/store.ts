@@ -1,5 +1,5 @@
 import { Store, StoreConfig } from '@datorama/akita';
-import { Data } from '../data.model';
+import { Data } from '../models/data.model';
 import { Injectable } from '@angular/core';
 
 export interface DataState {

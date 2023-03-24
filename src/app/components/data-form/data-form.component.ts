@@ -4,8 +4,8 @@ import {
   Validators,
 } from '@angular/forms';
 import { DataStore } from '../../state/store';
-import { MatDialogRef as MatDialogRef } from '@angular/material/dialog';
-import { Data } from '../../data.model';
+import { MatDialogRef } from '@angular/material/dialog';
+import { Data } from '../../models/data.model';
 
 @Component({
   selector: 'app-data-form',
@@ -14,13 +14,13 @@ import { Data } from '../../data.model';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DataFormComponent {
-  dataForm = this.fb.nonNullable.group({
+  dataForm = this.formBuilder.nonNullable.group({
     name: ['', [Validators.required]],
     isActive: [false],
   });
 
   constructor(
-    private fb: FormBuilder,
+    private formBuilder: FormBuilder,
     private dataStore: DataStore,
     private dialogRef: MatDialogRef<DataFormComponent>
   ) {}

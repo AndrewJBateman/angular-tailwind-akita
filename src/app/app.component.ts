@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { DataQuery } from './state/query';
 import { DataStore } from './state/store';
-import { Data } from './data.model';
+import { Data } from './models/data.model';
 import { MatSlideToggleChange } from '@angular/material/slide-toggle';
 import { MatDialog } from '@angular/material/dialog';
 

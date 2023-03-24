@@ -2,7 +2,7 @@ import { Query } from '@datorama/akita';
 import { DataState, DataStore } from './store';
 import { Observable, map } from 'rxjs';
 import { Injectable } from '@angular/core';
-import { DataViewModel } from '../data-view.model';
+import { DataViewModel } from '../models/data-view.model';
 
 @Injectable({
   providedIn: 'root',
