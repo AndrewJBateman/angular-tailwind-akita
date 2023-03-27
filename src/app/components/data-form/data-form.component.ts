@@ -1,8 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-import {
-  FormBuilder,
-  Validators,
-} from '@angular/forms';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, Validators, FormGroup } from '@angular/forms';
 import { DataStore } from '../../state/store';
 import { MatDialogRef } from '@angular/material/dialog';
 import { Data } from '../../models/data.model';
@@ -13,17 +10,21 @@ import { Data } from '../../models/data.model';
   styleUrls: ['./data-form.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class DataFormComponent {
-  dataForm = this.formBuilder.nonNullable.group({
-    name: ['', [Validators.required]],
-    isActive: [false],
-  });
+export class DataFormComponent implements OnInit {
+  public dataForm: FormGroup = new FormGroup('');
 
   constructor(
-    private formBuilder: FormBuilder,
+    private fb: FormBuilder,
     private dataStore: DataStore,
     private dialogRef: MatDialogRef<DataFormComponent>
   ) {}
+
+  ngOnInit(): void {
+    this.dataForm = this.fb.nonNullable.group({
+      name: ['', [Validators.required]],
+      isActive: [false],
+    });
+  }
 
   submit() {
     if (this.dataForm.invalid) {
@@ -40,7 +41,7 @@ export class DataFormComponent {
       stateCopy.allData.push(newData);
       const allDataCounter = stateCopy.allData.length;
       const activeDataCounter = stateCopy.allData.filter(
-        (data) => data.isActive
+        (data: Data) => data.isActive
       ).length;
       stateCopy.isBtnDisabled =
         allDataCounter === activeDataCounter && allDataCounter < 5

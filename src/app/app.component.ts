@@ -1,3 +1,5 @@
+import { DataViewModel } from './models/data-view.model';
+import { Observable } from 'rxjs';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { DataQuery } from './state/query';
 import { DataStore } from './state/store';
@@ -15,7 +17,7 @@ import { DataFormComponent } from './components/data-form/data-form.component';
 })
 export class AppComponent {
   displayedColumns: string[] = ['id', 'name', 'active'];
-  data$ = this.dataQuery.getAllData();
+  data$: Observable<DataViewModel> = this.dataQuery.getAllData();
 
   constructor(
     private dataQuery: DataQuery,
@@ -23,17 +25,20 @@ export class AppComponent {
     private dialog: MatDialog
   ) {}
 
-  toggleChange(event: MatSlideToggleChange, data: Data) {
+  // method to update state with active status
+  // returns button disabled status
+  onToggleActive(event: MatSlideToggleChange, data: Data) {
     this.dataStore.update((state) => {
       const dataCopy: Data = { ...data, isActive: event.checked };
+      console.log('dataCopy: ', dataCopy);
       const stateCopy = structuredClone(state);
       const index = stateCopy.allData.findIndex(
-        (data) => data.id === dataCopy.id
+        (data: Data) => data.id === dataCopy.id
       );
       stateCopy.allData[index] = dataCopy;
       const allDataCounter = stateCopy.allData.length;
       const activeDataCounter = stateCopy.allData.filter(
-        (data) => data.isActive
+        (data: Data) => data.isActive
       ).length;
       stateCopy.isBtnDisabled =
         allDataCounter === activeDataCounter && allDataCounter < 5
@@ -43,6 +48,7 @@ export class AppComponent {
     });
   }
 
+  // method to open a dialog with fields for data items
   addData() {
     this.dialog.open(DataFormComponent, {
       width: '600px',
