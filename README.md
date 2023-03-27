@@ -27,10 +27,10 @@
 ## :books: General info
 
 * API data displayed in a responsive grid of cards styled with Tailwind. Clicking on a card toggles a modal to open/close with the full API post data
-* TBA: About and Contact pages give more information on app using Tailwind CSS cards
 * Angular 12+ has built-in Tailwind support
 * To build for production Tailwind’s purge option is used to tree-shake unused styles and optimize final build size.
 * [Free svg site](https://freesvg.org/) for svgs
+* The [structuredClone() method](https://developer.mozilla.org/en-US/docs/Web/API/structuredClone) creates a deep clone (any changes to it will not affect the original and vice versa) of a value
 
 ## :camera: Screenshots
 
@@ -38,8 +38,8 @@
 
 ## :signal_strength: Technologies
 
-* [Angular framework v15](https://angular.io/)
-* [Akita State Management for JS v8](https://www.npmjs.com/package/@datorama/akita). Note, Akita recommend using a newer Reactive State Management solution called "Elf"
+* [Angular framework v16](https://angular.io/)
+* [Akita State Management for JS v8](https://www.npmjs.com/package/@datorama/akita).
 * [Reactive Extensions Library for Javascript rxjs v7](https://rxjs.dev/)
 * [Tailwindcss v3](https://tailwindcss.com/) CSS framework
 
@@ -74,6 +74,7 @@ tba
 ## :clap: Inspiration
 
 * [Akita docs](https://www.npmjs.com/package/@datorama/akita)
+* [Comment résoudre le problème "Object is of type 'unknown" en TypeScript ?](https://www.journaldunet.fr/web-tech/developpement/1516455-comment-resoudre-le-probleme-object-is-of-type-unknown-en-typescript/)
 
 ## :file_folder: License
 
