@@ -1,6 +1,6 @@
 import { DataViewModel } from './models/data-view.model';
 import { Observable } from 'rxjs';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { DataQuery } from './state/query';
 import { DataStore } from './state/store';
 import { Data } from './models/data.model';
@@ -15,15 +15,26 @@ import { DataFormComponent } from './components/data-form/data-form.component';
   styleUrls: ['./app.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  title = 'angular-tailwind-akita';
   displayedColumns: string[] = ['id', 'name', 'active'];
-  data$: Observable<DataViewModel> = this.dataQuery.getAllData();
+  data$: Observable<DataViewModel> = new Observable<{
+    allData: Data[];
+    isBtnDisabled: false;
+  }>();
 
   constructor(
     private dataQuery: DataQuery,
     private dataStore: DataStore,
     private dialog: MatDialog
   ) {}
+
+  ngOnInit(): void {
+    this.data$ = this.dataQuery.getAllData();
+    console.log(
+      this.data$.subscribe((x) => console.log('data: ', x))
+    );
+  }
 
   // method to update state with active status
   // returns button disabled status
