@@ -68,8 +68,8 @@ tba
 
 ## :clipboard: Status & To-Do List
 
-* Status: Working.
-* To-Do: Re-add Tailwind and styling
+* Status: Working, 3 type errors.
+* To-Do: Fix type errors, Add styling
 
 ## :clap: Inspiration
 
@@ -82,4 +82,4 @@ tba
 
 ## :envelope: Contact
 
-* Repo created by [ABateman](https://github.com/AndrewJBateman), email: gomezbateman@yahoo.com
+* Repo created by [ABateman](https://github.com/AndrewJBateman), email: `gomezbateman@yahoo.com`
